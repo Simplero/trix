@@ -29,7 +29,9 @@ class Trix.BlockView extends Trix.ObjectView
   createContainerElement: (depth) ->
     attribute = @attributes[depth]
     config = Trix.config.blockAttributes[attribute]
-    makeElement(config.tagName)
+    #makeElement(config.tagName)
+    # NICK/CALVIN: Change to make notice_box possible
+    makeElement(config.tagName, config.elementOptions)
 
   # A single <br> at the end of a block element has no visual representation
   # so add an extra one.

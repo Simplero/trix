@@ -78,6 +78,8 @@ class Trix.PieceView extends Trix.ObjectView
       if config.groupTagName
         attributes = {}
         attributes[key] = value
+        # NICK/CALVIN: Adding support for btn (and class attributes on links, say)
+        attributes['class'] = @attributes['class'] if @attributes['class']
         return makeElement(config.groupTagName, attributes)
 
   nbsp = Trix.NON_BREAKING_SPACE
